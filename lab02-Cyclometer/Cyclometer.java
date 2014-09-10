@@ -27,7 +27,7 @@ public class Cyclometer {
                 System.out.println("Trip 1 took "+
                     (secsTrip1/secondsPerMinute)+" minutes and had "+
                     countsTrip1+" counts.");
-                System.out.println("Trip 2 took "+
+                System.out.println("cd ~/workspaceTrip 2 took "+
                     (secsTrip2/secondsPerMinute)+" minutes and had "+
                     countsTrip2+ " counts.");
                 
