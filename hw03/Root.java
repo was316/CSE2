@@ -17,7 +17,7 @@ import java.util.Scanner;
             Scanner myScanner = new Scanner( System.in );
             
                 //prompt the user for a number
-                System.out.print("Enter a couble,  and I print its cube root :");
+                System.out.print("Enter a double,  and I print its cube root :");
                 
                     //accept user input
                     double number = myScanner.nextDouble();
