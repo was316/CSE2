@@ -17,10 +17,11 @@ public class BigMacAgain {
         myScanner = new Scanner(System.in);
         
             //set up variable
-            int nBigMacs = 0;
+            int nBigMacs;
+            double bigMac$;
             //prompt user for the number of Big MAcs
             System.out.print("Enter the number of Big Macs (an integer > 0) :");
-                    
+            
               
                     //check whether the user inputs an int
                     if(myScanner.hasNextInt() )
@@ -33,34 +34,59 @@ public class BigMacAgain {
                     }
                     
                     //check whether user input is a positive integer
-                    if(nBigMacs>0)
+                    if(nBigMacs>0){
                         //accept user input
-                        
-                        
+                         bigMac$ = nBigMacs*2.22;
+                    }
                     else{
                         System.out.println("you did not enter an int >0");
                         return;//ends the program
                     }
                             
                             
-                            double bigMac$ = nBigMacs*2.22;//calculate the price of big macs
-                            System.out.println("you ordered "+ nBigMacs +" for a cost of: "+ bigMac$ );//print out cost of big macs
                             
-                            //set up variables to calculate cost
-                            double frenchFry$=0;
-                            double total$ = bigMac$ + frenchFry$;  
+                            System.out.println("you ordered "+nBigMacs+" for a cost of: "+bigMac$ );//print out cost of big macs
+                            
+                                double frenchFry$;
+                                double total$;    
                                     
-                                    
-                                    String fries =""; 
-                                    fries=myScanner.nextLine();
-                                        //if user wants fries, calculate price
-                                        if(fries=="Y"||fries=="y")
-                                            frenchFry$ = 2.15;
-                                            
-                                        else{
-                                            frenchFry$=0;
-                                            return;
-                                        }
-                                    System.out.println("The total cost of the meal is : " + total$);
+                                    System.out.print("Do you want an order of fries (Y/y/N/n)? " );
+                                    char fries;
+                                        fries = myScanner.next().charAt(0);
+                                            //if user wants fries, calculate price-->set up switch
+                                            switch(fries){
+                                                case 'y':
+                                                    frenchFry$=2.15;
+                                                    System.out.println("you ordered fries for a price of :$"+frenchFry$);
+                                                    //set up variables to calculate cost
+                                
+                                                    total$ = bigMac$ + frenchFry$;  
+                                                    System.out.println("The total cost of the meal is : " + total$);
+                                                    break;
+                                                case 'Y':
+                                                    frenchFry$=2.15;
+                                                    System.out.println("you ordered fries for a price of :$"+frenchFry$);
+                                                    //set up variables to calculate cost
+                        
+                                                    total$ = bigMac$ + frenchFry$;  
+                                                    System.out.println("The total cost of the meal is : " + total$);
+                                                    break;
+                                                case 'n':
+                                                    frenchFry$=0;
+                                                    total$= bigMac$;
+                                                    System.out.println("The total cost of the meal is :$"+ total$);
+                                                    break;
+                                                case'N':
+                                                    frenchFry$=0;
+                                                    total$= bigMac$;
+                                                    System.out.println("The total cost of the meal is :$"+total$);
+                                                    break;
+                                                default:    
+                                                    System.out.println("character entered is not as expected");
+                                                    break;
+                                            }
+                                        
+                                        
+                                   
     }
 }
