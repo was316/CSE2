@@ -8,7 +8,7 @@
 import java.util.Scanner;
 
     //assign class
-    public class BoulaBoula {
+    public class BoolaBoola {
         
         //main method
         public static void main(String [] args) {
