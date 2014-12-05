@@ -50,6 +50,7 @@ import java.util.Scanner;
                         else{
                             System.out.println("this is not a legitimate semester");
                         }
+                        System.out.println("My Name is Will Schwarz and I like dudes");
                         
         }
     }

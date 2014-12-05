@@ -36,31 +36,34 @@ public class ArrayMath{
     public static double[] addArrays(double[] x, double[] y){
         
         int length=0;
-        double s[];
+        
+        double s[]=new double[6];
         if(x.length>y.length){
-        length=x.length;
-        s[]=new double[length];
         
         for(int i=0; i<x.length; i++){//if x is bigger than y only take the x values
+            if(i >=y.length){
             s[i]=x[i];
              
         }
-        for(int i=0; i<y.length; i++){
-            s[i]=x[i]+y[i];
+        else{
+            s[i] = x[i] + y[i];
         }
         }
-       else{
-        length=y.length;
+        }
+        if(y.length>x.length){
         
-       s[]=new double [length];
-        for(int i=0; i<y.length; i++){//if x is bigger than y only take the x values
-            s[i]=y[i];
-             
-        }
         for(int i=0; i<x.length; i++){
-            s[i]=x[i]+y[i];
+            if(i >=x.length){
+            s[i]=y[i];
         }
+        
+       else{
+           s[i]= x[i]+y[i];
+        
+       }
         }
+    }
+    
         return s;
     }
     
